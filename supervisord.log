@@ -1,0 +1,10 @@
+2018-11-02 22:01:45,726 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2018-11-02 22:01:45,728 INFO supervisord started with pid 32525
+2018-11-02 22:01:46,731 INFO spawned: 'event_app' with pid 32529
+2018-11-02 22:01:46,734 INFO spawned: 'event_task' with pid 32530
+2018-11-02 22:01:47,736 INFO success: event_app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-11-02 22:01:47,736 INFO success: event_task entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-11-02 22:04:34,813 WARN received SIGINT indicating exit request
+2018-11-02 22:04:34,814 INFO waiting for event_app, event_task to die
+2018-11-02 22:04:34,817 INFO stopped: event_task (terminated by SIGTERM)
+2018-11-02 22:04:34,821 INFO stopped: event_app (terminated by SIGTERM)
