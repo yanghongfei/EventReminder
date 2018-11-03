@@ -27,13 +27,13 @@ class Application(tornado.web.Application):
             # cookie_secret="61oETzKXQAGaYdkL5gEmGeJJFuYh7EQnp2XdTP1o/Vo=",
             # xsrf_cookies=True,
             # login_url="/login",
-            debug=True,
+            debug=False,
         )
         tornado.web.Application.__init__(self, handlers, **settings)
 
 
 def main():
-    init_db()
+    #nit_db() #第一次初始化使用
     tornado.options.parse_command_line()
     http_server = tornado.httpserver.HTTPServer(Application())
     http_server.listen(options.port)
