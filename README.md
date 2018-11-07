@@ -5,7 +5,7 @@ Table of Contents
       * [表结构](#表结构)
       * [参数介绍](#参数介绍)
       * [API接口](#api接口)
-         * [Python示例：](#python示例)
+         * [Python示例](#python示例)
       * [安装使用(手动安装)](#安装使用手动安装)
       * [安装使用(Docker-compose)](#安装使用docker-compose)
 
@@ -46,7 +46,7 @@ Table of Contents
 - 工具： Postman
 - 支持： POST/PUT/DELETE
 
-### Python示例：
+### Python示例
 ```python
 # Body内容,根据name判断
 {
