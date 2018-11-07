@@ -1,9 +1,22 @@
-### 事件提醒
+Table of Contents
+=================
+
+   * [事件提醒](#事件提醒)
+      * [表结构](#表结构)
+      * [参数介绍](#参数介绍)
+      * [API接口](#api接口)
+         * [Python示例：](#python示例)
+      * [安装使用(手动安装)](#安装使用手动安装)
+      * [安装使用(Docker-compose)](#安装使用docker-compose)
+
+
+
+# 事件提醒
 - 使用人员请先修改settins里面配置信息
 - 第一次使用，请打开app.py里面的`init_db`函数用于自动创建表
 - 检测颗粒度默认为每小时，也可在`event_task.py`脚本自行修改
 
-#### 表结构
+## 表结构
 ```mysql
 +------------+--------------+------+-----+-------------------+-----------------------------+
 | Field      | Type         | Null | Key | Default           | Extra                       |
@@ -18,7 +31,7 @@
 | update_at  | timestamp    | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
 +------------+--------------+------+-----+-------------------+-----------------------------+
 ```
-#### 参数介绍
+## 参数介绍
 - ID: 自增长
 - name: 事件名称
 - content: 事件内容描述
@@ -28,12 +41,12 @@
 - create_at: 记录事件创建时间
 - update_at: 记录事件更新时间
 
-#### API接口
+## API接口
 - URL: http://172.16.0.101:8888/event
 - 工具： Postman
 - 支持： POST/PUT/DELETE
 
-示例：
+### Python示例：
 ```python
 # Body内容,根据name判断
 {
@@ -46,7 +59,7 @@
 ```
 
 
-#### 安装使用(手动安装)
+## 安装使用(手动安装)
 - 请修改对应settings里面的内容
 - 创建数据库
 ```mysql
@@ -79,7 +92,7 @@ $ /usr/bin/supervisord  #后台运行使用/usr/bin/supervisord &
 ```
 
 
-#### 安装使用(Docker-compose)
+## 安装使用(Docker-compose)
 - 请修改对应settings里面的内容
 - 首先要具有docker环境，docker推荐使用`docker-ce`
 - 进入到项目目录，制作镜像启动
